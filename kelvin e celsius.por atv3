@@ -1,0 +1,14 @@
+programa {
+  funcao inicio() {
+    real c, k, total
+
+    escreva("Digite temperatura Celius: ")
+    leia("c")
+
+    escreva("Digite temperatura Kelvin: ")
+    leia("K")
+
+    total = c + 273.15
+    escreva("Temperatura em Kelvin é: ", total)
+  }
+}
