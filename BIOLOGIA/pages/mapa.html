@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mapa da Cidade de Garça</title>
+
+  <!-- Leaflet -->
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#eef7ee;
+    }
+
+    header{
+      background:#2d6a4f;
+      color:white;
+      text-align:center;
+      padding:25px;
+    }
+
+    header h1{
+      font-size:2.2rem;
+    }
+
+    #map{
+      width:100%;
+      height:90vh;
+    }
+
+    footer{
+      background:#1b4332;
+      color:white;
+      text-align:center;
+      padding:15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🗺️ Mapa Interativo de Garça - SP</h1>
+  </header>
+
+  <div id="map"></div>
+
+  <footer>
+    <p>Mapa da cidade de Garça/SP</p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+
+    // Coordenadas centrais de Garça/SP
+    const garca = [-22.2125, -49.6561];
+
+    // Criando o mapa
+    const map = L.map('map').setView(garca, 14);
+
+    // Camada do OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    // Marcador central
+    L.marker(garca)
+      .addTo(map)
+      .bindPopup(`
+        <h3>Garça - SP</h3>
+        <p>Cidade do interior paulista</p>
+      `)
+      .openPopup();
+
+  </script>
+
+</body>
+</html>
