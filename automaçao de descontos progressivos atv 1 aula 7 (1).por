@@ -1,17 +1,17 @@
 programa {
   funcao inicio() {
-    real n1, total
+    real valor_compra, total
 
     escreva("Digite o valor: ")
-    leia(n1)
+    leia(valor_compra)
 
-    se ( n1 >= 1000 ) {
-      total = n1 * 0.15
+    se ( valor_compra >= 1000 ) {
+      total = valor_compra * 0.15
       } 
-      senao se ( n1 > 500 e n1 < 1000 ) {
-      total = n1 * 0.10
+      senao se ( valor_compra > 500 e valor_compra < 1000 ) {
+      total = valor_compra * 0.10
     }
-    senao se (n1 <= 500) {
+    senao se (valor_compra <= 500) {
       total = n1 * 0.05
   }
 
