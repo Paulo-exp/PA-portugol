@@ -18,11 +18,11 @@ programa {
       escreva(n1," ", n3," ", n2, " ")
     }
 
-    se ((n2 < n1) e (n1 < n3)) {
+    se (n2 < n1 e n1 < n3) {
       escreva(n2," ", n1," ", n3, " ")
     }
 
-    se ((n2 < n3) e (n3 < n1 )) {
+    se (n2 < n3 e n3 < n1 ) {
       escreva(n2," ", n3," ", n1, " ")
     }
 
