@@ -1,6 +1,6 @@
 programa {
   funcao inicio() {
-    inteiro idade, t_servico
+    real idade, t_servico
 
     escreva("Digite sua idade: ")
     leia(idade)
@@ -16,11 +16,11 @@ programa {
       escreva("Você podera aposentar por causa de seu tempo de serviço ")
       }
 
-      senao se (idade == 60 e t_servico >= 25) {
+    senao se (idade == 60 e t_servico >= 25) {
         escreva("Você pode se aposentar por causa do seu tempo de tarbalho e sua idade ")
-    }
-
-    senao (idade < 65 e t_servico < 30) 
+      }
+      
+    senao 
       escreva("Você não atende os requisitos para aposentadoria ")
     
   }
