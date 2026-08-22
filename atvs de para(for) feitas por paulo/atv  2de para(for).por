@@ -1,15 +1,20 @@
 programa {
-  funcao inicio() {
-     real i, numero, soma = 0, media
-    para( i = 1; i <=10; i++) {
-      escreva("Digite um valor: ")
-      leia(numero)
-      soma = soma + numero
-      
-    }
+    funcao inicio() {
+        inteiro i = 0, numero, soma = 0
+        real media
 
-    media = soma / 10
-    
-    escreva("O valor total é de: ", media)
-  }
+        enquanto (i < 10) {
+            escreva("Digite um valor positivo: ")
+            leia(numero)
+
+            se (numero > 0) {
+                soma = soma + numero
+                i++
+            }
+        }
+
+        media = soma / 10.0
+
+        escreva("A média dos valores é: ", media)
+    }
 }
