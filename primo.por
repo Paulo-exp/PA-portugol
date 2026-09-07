@@ -1,22 +1,30 @@
 programa {
   funcao inicio() {
     inteiro n, divisao
+    logico primo
 
-    escreva("Digite um número: ")
+    escreva("Digite um número maior que 1: ")
     leia(n)
 
-    se (n <= 1) {
-      escreva("Esse número não e um número primo poís e negativo.")
-    }
+    primo = verdadeiro
 
-    para (divisao = 2 ; divisao < n; divisao++) {
-      se (n % divisao == 0){
-        escreva("Esse valor não e um número primo.")
+    escreva("Divisores de ", n, ": ")
+
+    para (divisao = 1; divisao <= n; divisao++) {
+      
+      se (n % divisao == 0) {
+        escreva(divisao, " ")
+        
+        se (divisao != 1 e divisao != n) {
+          primo = falso
+        }
       }
     }
 
-    se (n ){
+    escreva("\n")
 
+    se (primo) {
+      escreva("Esse número é primo!")
     }
     senao {
       escreva("Esse número não é primo!")
